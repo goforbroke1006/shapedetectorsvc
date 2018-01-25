@@ -2,6 +2,7 @@
 
 if [ -f /etc/lsb-release ]; then # Ubuntu
     sudo apt-get install -y python-opencv
+    sudo apt-get install -y python-tk
     pip install --upgrade pip
     sudo pip install -r ./requirements.txt
 else
