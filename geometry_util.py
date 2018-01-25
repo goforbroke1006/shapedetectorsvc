@@ -1,7 +1,15 @@
 import math
+import cv2
 
 DIRECTION_LEFT = "left"
 DIRECTION_RIGHT = "right"
+
+
+def contour_center(c):
+    m = cv2.moments(c)
+    x = int((m["m10"] / m["m00"]))
+    y = int((m["m01"] / m["m00"]))
+    return x, y
 
 
 def vectors_angle(x1, y1, x2, y2):
