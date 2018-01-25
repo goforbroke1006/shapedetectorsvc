@@ -7,7 +7,7 @@ Use OpenCV for analize image parts.
 At first, need prepare environemnt
 
   ``` bash
-  make clean-pyc
+  make setup
   ```
 
 Run example
