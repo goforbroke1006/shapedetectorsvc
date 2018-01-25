@@ -8,7 +8,7 @@ clean-pyc:
 setup:
 	bash bin/setup-local.sh
 
-test: clean-pyc
+tests: clean-pyc
 	py.test --verbose --color=yes $(TEST_PATH)
 
 run: clean-pyc

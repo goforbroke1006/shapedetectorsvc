@@ -19,5 +19,5 @@ Run example
 Run tests
 
   ``` bash
-  make test
+  make tests
   ```
