@@ -1,9 +1,8 @@
-TEST_PATH=./tests/
+TEST_PATH=./
 
 clean-pyc:
-	find . -name '*.pyc' -exec rm --force {} +
-	find . -name '*.pyo' -exec rm --force {} +
-	name '*~' -exec rm --force  {}
+	find . -name '*.pyc' -exec rm --force {} || true
+	find . -name '*.pyo' -exec rm --force {} || true
 
 setup:
 	bash bin/setup-local.sh
