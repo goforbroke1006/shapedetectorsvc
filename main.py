@@ -32,9 +32,12 @@ contours = contours[0] if imutils.is_cv2() else contours[1]
 dir_ = "classifiers"
 classifiers = []
 for classifier_file in os.listdir(os.path.dirname(__file__) + "/" + dir_):
-    if classifier_file == '__init__.py' or classifier_file[-3:] != '.py':
+    if classifier_file[-3:] != '.py':
         continue
+
     classifier_name = classifier_file[:-3]
+    if '__init__' == classifier_name or "test" in classifier_name:
+        continue
     print(classifier_name)
     module_ = __import__(dir_ + "." + classifier_name, locals(), globals(), fromlist=[classifier_name])
     class_ = getattr(module_, classifier_name)
